@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dbMaquinas.Models.CadMaquinas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Cadastro de Máquinas</h1>
+
+<hr class="rosa"/>
+
+<div class="containerin">
+
+<p>
+        <a asp-action="Create" class="btn btn-outline-danger">Adicionar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patrimonio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patrimonio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HD)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDMaquina">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IDMaquina">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IDMaquina">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>

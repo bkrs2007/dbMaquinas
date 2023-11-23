@@ -1,0 +1,44 @@
+﻿@model dbMaquinas.Models.CadMaquinas
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Detalhes</h1>
+
+<h4 class="rosa principal2">Cadastro de Máquinas</h4>
+
+<hr class="rosa" />
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Patrimonio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Patrimonio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Memoria)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Memoria)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HD)
+        </dd>
+    </dl>
+</div>
+
+<p></p>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IDMaquina" class="btn btn-danger">Editar</a>
+
+    <p></p>
+
+    <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+</div>

@@ -1,0 +1,55 @@
+﻿@model dbMaquinas.Models.Inventario
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Editar</h1>
+
+<h4 class="rosa principal2">Inventário</h4>
+<hr  class="rosa"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IDInventario" />
+            <div class="form-group">
+                <label asp-for="IDCliente" class="control-label">ID do Cliente</label>
+                <input asp-for="IDCliente" class="form-control" />
+                <span asp-validation-for="IDCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDMaquina" class="control-label">ID da Máquina</label>
+                <input asp-for="IDMaquina" class="form-control" />
+                <span asp-validation-for="IDMaquina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+
+            <p></p>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<p></p>
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

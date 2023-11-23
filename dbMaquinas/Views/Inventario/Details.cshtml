@@ -1,0 +1,53 @@
+﻿@model dbMaquinas.Models.Inventario
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Detalhes</h1>
+
+<h4 class="rosa principal2">Inventario</h4>
+
+<hr class="rosa"/>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>ID do Cliente</label>
+@*             @Html.DisplayNameFor(model => model.IDCliente)
+ *@        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>ID da Máquina</label>
+@*             @Html.DisplayNameFor(model => model.IDMaquina)
+ *@        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IDMaquina)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <p></p>
+
+    <a asp-action="Edit" asp-route-id="@Model?.IDInventario" class="btn btn-danger">Editar</a>
+
+    <p></p>
+
+    <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+</div>

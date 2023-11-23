@@ -1,0 +1,41 @@
+﻿@model dbMaquinas.Models.CadClientes
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Deletar</h1>
+
+<h4 class="rosa principal2">Cadastro de Clientes</h4>
+
+<hr class="rosa"/>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>Nome do Cliente</label>
+            @* @Html.DisplayNameFor(model => model.NomeCliente) *@
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+    </dl>
+
+    <p></p>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDCliente" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+
+        <p></p>
+
+        <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
+    </form>
+</div>

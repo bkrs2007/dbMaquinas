@@ -1,0 +1,87 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: pink;
+}
+
+/*-------------------------------------------------------------Página Inicial------------------------------------------------------------*/
+
+.containerin2 {
+    background-color: #ffcccc; /* cor rosa claro */
+    padding: 80px;
+    border-radius: 10px;
+    margin-top: 180px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.intro {
+    color: deeppink;
+}
+
+.inicio {
+    color: hotpink;
+    padding: 40px;
+}
+
+.rosa{
+    color: deeppink;
+}
+
+.principal{
+    text-align:center;
+    margin-top: 40px;
+}
+
+.principal2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+
+.containerin {
+    background-color: #ffcccc; /* cor rosa claro */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* centraliza o container */
+    width: 80%; 
+    height:80%;
+    text-align: center;
+    margin-top:70px;
+}
+
+.containerin3 {
+    background-color: #ffcccc; /* cor rosa claro */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bg-rosa-claro {
+    background-color: #DB7093; /* ou utilize mistyrose ou rgb(255, 204, 204) */
+}
+
+.text-rosa-escuro {
+    color: #FFFAFA;
+}
+
+

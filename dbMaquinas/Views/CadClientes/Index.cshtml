@@ -1,0 +1,48 @@
+﻿@model IEnumerable<dbMaquinas.Models.CadClientes>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="rosa principal">Cadastro de Clientes</h1>
+
+<hr class="rosa"/>
+
+<div class="containerin">
+
+<p>
+        <a asp-action="Create" class="btn btn-outline-danger">Adicionar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDCliente">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IDCliente">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IDCliente">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>
